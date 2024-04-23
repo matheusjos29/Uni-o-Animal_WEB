@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    padding: 0 10px; 
+    text-align: justify;
+}
+.texto {
+    font-family: Arial; 
+}
+h1, h3{
+    color: rgb(0, 132, 132);
+}
+.git a {
+    text-decoration: none;
+    color: rgb(0, 132, 132);
+}
+.git a:hover {
+    text-decoration: none;
+    color: blue;
+}

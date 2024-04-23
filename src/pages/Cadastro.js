@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './cadastro.css';
 
 function Cadastro() {
   const [nomeCompleto, setNomeCompleto] = useState('');
@@ -15,54 +16,56 @@ function Cadastro() {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#18363E' }}>
-      <div style={{ background: '#23504F', padding: '20px', borderRadius: '10px', width: '400px' }}>
-        <h1 style={{ color: 'white', textAlign: 'center', marginBottom: '20px' }}>Cadastro</h1>
-        <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: '10px' }}>
-            <label style={{ color: 'white' }}>Nome Completo:</label>
-            <input
-              type="text"
-              value={nomeCompleto}
-              onChange={(e) => setNomeCompleto(e.target.value)}
-              style={{ width: '100%', padding: '8px', borderRadius: '5px', border: 'none' }}
-              required
-            />
-          </div>
-          <div style={{ marginBottom: '10px' }}>
-            <label style={{ color: 'white' }}>Email:</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              style={{ width: '100%', padding: '8px', borderRadius: '5px', border: 'none' }}
-              required
-            />
-          </div>
-          <div style={{ marginBottom: '10px' }}>
-            <label style={{ color: 'white' }}>Senha:</label>
-            <input
-              type="password"
-              value={senha}
-              onChange={(e) => setSenha(e.target.value)}
-              style={{ width: '100%', padding: '8px', borderRadius: '5px', border: 'none' }}
-              required
-            />
-          </div>
-          <div style={{ marginBottom: '10px' }}>
-            <label style={{ color: 'white' }}>Número de Telefone:</label>
-            <input
-              type="text"
-              value={telefone}
-              onChange={(e) => setTelefone(e.target.value)}
-              style={{ width: '100%', padding: '8px', borderRadius: '5px', border: 'none' }}
-              required
-            />
-          </div>
-          <button type="submit" style={{ width: '100%', padding: '10px', borderRadius: '5px', border: 'none', background: '#0D2C2B', color: 'white', cursor: 'pointer' }}>Cadastrar</button>
-        </form>
-      </div>
-    </div>
+    React.createElement('div', { className: 'container' },
+      React.createElement('div', { className: 'caixa-cadastro' },
+        React.createElement('h1', { className: 'cadastro-nome' }, 'Cadastro'),
+        React.createElement('form', { onSubmit: handleSubmit },
+          React.createElement('div', { className: 'caixa-de-texto' },
+            React.createElement('div', null,
+              React.createElement('label', null, 'Nome Completo:'),
+              React.createElement('input', {
+                type: 'text',
+                value: nomeCompleto,
+                onChange: (e) => setNomeCompleto(e.target.value),
+                style: { width: '100%', padding: '8px', borderRadius: '5px', border: 'none' },
+                required: true
+              })
+            ),
+            React.createElement('div', null,
+              React.createElement('label', null, 'Email:'),
+              React.createElement('input', {
+                type: 'email',
+                value: email,
+                onChange: (e) => setEmail(e.target.value),
+                style: { width: '100%', padding: '8px', borderRadius: '5px', border: 'none' },
+                required: true
+              })
+            ),
+            React.createElement('div', null,
+              React.createElement('label', null, 'Senha:'),
+              React.createElement('input', {
+                type: 'password',
+                value: senha,
+                onChange: (e) => setSenha(e.target.value),
+                style: { width: '100%', padding: '8px', borderRadius: '5px', border: 'none' },
+                required: true
+              })
+            ),
+            React.createElement('div', null,
+              React.createElement('label', null, 'Número de Telefone:'),
+              React.createElement('input', {
+                type: 'text',
+                value: telefone,
+                onChange: (e) => setTelefone(e.target.value),
+                style: { width: '100%', padding: '8px', borderRadius: '5px', border: 'none' },
+                required: true
+              })
+            )
+          ),
+          React.createElement('button', { type: 'submit', className: 'butao' }, 'Cadastrar')
+        )
+      )
+    )
   );
 }
 

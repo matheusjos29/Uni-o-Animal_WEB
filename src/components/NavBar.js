@@ -1,21 +1,22 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css'; // Certifique-se de ter seu arquivo CSS de estilos
 
 function NavBar() {
   return (
-    <div className="navbar">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/About">About</Link>
-        </li>
-        <li>
-          <Link to="/Cadastro">Cadastro</Link>
-        </li>
-      </ul>
-    </div>
+    React.createElement('div', { className: 'navbar' },
+      React.createElement('ul', null,
+        React.createElement('li', null,
+          React.createElement(Link, { to: '/' }, 'Home')
+        ),
+        React.createElement('li', null,
+          React.createElement(Link, { to: '/About' }, 'About')
+        ),
+        React.createElement('li', null,
+          React.createElement(Link, { to: '/Cadastro' }, 'Cadastro')
+        )
+      )
+    )
   );
 }
 

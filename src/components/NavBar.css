@@ -1,22 +1,25 @@
 .navbar {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(39, 55, 49, 0.9); /* Cor verde militar quase transparente */
-    padding: 10px 0;
-  }
-  
-  .navbar ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .navbar li {
-    margin-right: 20px;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-  }
-  
+  display: flex;
+  justify-content: center;
+  background-color: aqua; 
+  padding: 10px 0;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: blue;
+  font-size: 1.2em;
+}

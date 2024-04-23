@@ -7,14 +7,14 @@ import Cadastro from './pages/Cadastro';
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Cadastro" element={<Cadastro />} /> {/* Adicionando a rota para Cadastro */}
-      </Routes>
-    </Router>
+    React.createElement(Router, null,
+      React.createElement(NavBar),
+      React.createElement(Routes, null,
+        React.createElement(Route, { path: '/', element: React.createElement(Home) }),
+        React.createElement(Route, { path: '/About', element: React.createElement(About) }),
+        React.createElement(Route, { path: '/Cadastro', element: React.createElement(Cadastro) })
+      )
+    )
   );
 }
 
